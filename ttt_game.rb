@@ -114,10 +114,11 @@ class Game
             if @board.make_move(user_move, @cur_player)
                 @moves_made += 1
 
-                # was this a winning move? Or is it a draw?
+                # was this a winning move? 
                 if @board.have_winner?
                     show_game_over(@cur_player)
                     break
+                # if no winner, but no more moves are possible, it's a draw
                 elsif not @board.has_valid_moves?
                     show_game_over(nil)
                     break
