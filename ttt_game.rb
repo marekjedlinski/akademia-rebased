@@ -76,7 +76,7 @@ class Game
 
     def get_user_move
         # prompt user for valid board location
-        # return user move as row:col, A1, B2 etc
+        # return user move as col:row, A1, B2 etc
         user_move = ""
         loop do
             @board.draw(show_labels=true)
